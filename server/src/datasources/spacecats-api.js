@@ -13,6 +13,10 @@ class SpaceCatsAPI extends RESTDataSource {
     getMissions(catId) {
         return this.get(`spacecats/${catId}/missions`);
     }
+
+    getSpaceCat(id) {
+        return this.get(`spacecats/${catId}`);
+    }
   }
 
   module.exports = SpaceCatsAPI;

@@ -43,7 +43,9 @@ const typeDefs = gql`
     type Query {
         spaceCats: [SpaceCat]
         tracksForHome: [Track!]!
-        track: Track
+        track(id: ID!): Track
+        spaceCat(id: ID!): SpaceCat
+        missions(to: String, scheduled: Boolean): [Mission]
     }
 `;
 

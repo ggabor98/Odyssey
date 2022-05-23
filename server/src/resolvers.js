@@ -5,9 +5,15 @@ const resolvers = {
         tracksForHome: (_, __, { dataSources }) => {
             return dataSources.trackAPI.getTracksForHome();
         },
+        track: (_, { id }, {dataSources}) => {
+            return dataSources.trackAPI.getTrack(id);
+        },
         spaceCats: (_, __, { dataSources }) => {
             return dataSources.spaceCatsAPI.getSpaceCats();
-        }
+        },
+        spaceCat: (_, { id }, {dataSources}) => {
+            return dataSources.spaceCatsAPI.getSpaceCat(id);
+        }, 
     },
     Track: {
         author: ({authorId}, _, {dataSources}) => {
